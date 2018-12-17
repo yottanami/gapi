@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
@@ -43,3 +43,12 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#Personal GEMS
+gem 'devise'
+gem 'graphql'
+gem 'graphiql-rails', group: :development
+gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-video'
+gem 'mini_magick'
+gem 'file_validators'
