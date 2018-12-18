@@ -8,8 +8,8 @@ module Mutations
     argument :title, String, required: true
     argument :body, String, required: false
     argument :category_id, ID, required: true
-    argument :image, ID, optional: true
-    argument :video, ID, required: false
+    argument :image, String, required: false
+    argument :video, String, required: false
 
     def resolve(title:, body:, image:, video:, category_id:)
       category = Category.find(category_id)
