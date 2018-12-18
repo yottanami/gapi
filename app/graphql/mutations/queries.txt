@@ -1,0 +1,18 @@
+mutation example($post: CreatePostInput!){
+   createPost(input: $post) {
+		post{
+      title
+      body
+    }
+  }
+}
+
+
+{
+  "post": {
+    "title": "Sample",
+    "body": "test",
+    "categoryId": 1
+
+  }
+}
