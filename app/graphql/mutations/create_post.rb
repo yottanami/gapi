@@ -1,5 +1,6 @@
 module Mutations
   class CreatePost < GraphQL::Schema::RelayClassicMutation
+
     # TODO: define return fields
     field :post, Types::PostType, null: false
     field :errors, [String], null: false
@@ -8,8 +9,8 @@ module Mutations
     argument :title, String, required: true
     argument :body, String, required: false
     argument :category_id, ID, required: true
-    argument :image, String, required: false
-    argument :video, String, required: false
+    argument :image, ApolloUploadServer::Upload, required: false
+    argument :video, ApolloUploadServer::Upload, required: false
 
     def resolve(title:, body:, image:, video:, category_id:)
       category = Category.find(category_id)

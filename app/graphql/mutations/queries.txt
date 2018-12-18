@@ -1,6 +1,6 @@
-mutation example($post: CreatePostInput!){
-   createPost(input: $post) {
-		post{
+mutation example($post: CreatePostInput!) {
+  createPost(input: $post) {
+    post {
       title
       body
     }
@@ -12,7 +12,30 @@ mutation example($post: CreatePostInput!){
   "post": {
     "title": "Sample",
     "body": "test",
-    "categoryId": 1
+    "categoryId": 1,
+    "image": "test",
+    "video": "test"
 
+  }
+}
+
+
+////////////////////////////////
+
+mutation example($category: CreateCategoryInput!) {
+  createCategory(input: $category) {
+    category {
+      title
+      body
+    }
+  }
+}
+
+
+{
+  "category": {
+    "title": "Sample",
+    "body": "test",
+    "parentId": null
   }
 }
