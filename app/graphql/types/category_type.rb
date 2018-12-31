@@ -5,5 +5,6 @@ module Types
     field :disabled, Boolean, null: true
     field :user, Types::UserType, null: true
     field :parent_id, ID, null: true
+    field :image, ApolloUploadServer::Upload, null: true
   end
 end

@@ -1,5 +1,5 @@
 class MainController < ApplicationController
   def home
-    render :json => {:name => "Wrong path!"}
+    render :json => {:error => "Wrong path!"}
   end
 end

@@ -6,6 +6,7 @@ module Mutations
     argument :title, String, required: true
     argument :body, String, required: false
     argument :parent_id, ID, required: false
+    argument :image, ApolloUploadServer::Upload, required: false
 
     def resolve(title:, body:, parent_id:)
       category = Category.new(title: title, body: body, parent_id: parent_id, user: context[:current_user])
