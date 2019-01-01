@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2018_12_01_074832) do
   create_table "categories", force: :cascade do |t|
     t.string "title"
     t.text "body"
+    t.string "image"
     t.boolean "disabled", default: false
     t.integer "parent_id"
     t.integer "user_id"

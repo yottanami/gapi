@@ -8,8 +8,9 @@ module Mutations
     argument :parent_id, ID, required: false
     argument :image, ApolloUploadServer::Upload, required: false
 
-    def resolve(title:, body:, parent_id:)
-      category = Category.new(title: title, body: body, parent_id: parent_id, user: context[:current_user])
+    def resolve(title:, body:, parent_id:, image:)
+      category = Category.new(title: title, body: body, parent_id: parent_id, user: context[:current_user], image: image)
+      byebug
       if category.save
         {
           category: category,
