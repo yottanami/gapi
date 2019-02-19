@@ -24,11 +24,11 @@ class VideoUploader < CarrierWave::Uploader::Base
   # end
   process encode_video: [:mp4, callbacks: { after_transcode: :set_success } ]
 
-  process watermark: {
-  path: File.join(Rails.root, "public", "watermark.png"),
-  position: :bottom_right, # also: :top_right, :bottom_left, :bottom_right
-  pixels_from_edge: 10
-}
+#  process watermark: {
+#  path: File.join(Rails.root, "public", "watermark.png"),
+#  position: :bottom_right, # also: :top_right, :bottom_left, :bottom_right
+#  pixels_from_edge: 10
+#}
   # Process files as they are uploaded:
   # process scale: [200, 300]
   #
