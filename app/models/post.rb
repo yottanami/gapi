@@ -2,7 +2,7 @@ class Post < ApplicationRecord
   belongs_to :category
   belongs_to :user
 
-  mount_uploader :image, ImageUploader
+  mount_uploader :image, PostImageUploader
   validates :image, file_size: { less_than: 5.megabytes }
 
   mount_uploader :video, VideoUploader

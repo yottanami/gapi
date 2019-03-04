@@ -10,7 +10,6 @@ module Mutations
 
     def resolve(title:, body:, parent_id:, image:)
       category = Category.new(title: title, body: body, parent_id: parent_id, user: context[:current_user], image: image)
-      byebug
       if category.save
         {
           category: category,
