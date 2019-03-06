@@ -2,6 +2,18 @@
 module Types
   class QueryType < Types::BaseObject
 
+    field :currentUser, UserType, null: false do
+      description "Returns the current user"
+      #resolve -> (obj, args, ctx) {
+      #  ctx[:current_user]
+      #}
+
+    end
+
+    def currentUser()
+      current_user
+    end
+
     field :post, PostType, null: true do
       description "Find a post by ID"
       argument :id, ID, required: true
@@ -26,7 +38,7 @@ module Types
     end
 
     def categories(parent_id: nil)
-     parent_id.nil? ?  Category.all : Category.where(parent_id: parent_id)
+      parent_id.nil? ?  Category.all : Category.where(parent_id: parent_id)
     end
 
   end

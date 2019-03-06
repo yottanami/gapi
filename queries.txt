@@ -39,3 +39,21 @@ mutation example($category: CreateCategoryInput!) {
     "parentId": null
   }
 }
+
+
+
+//////////////////////////////
+mutation example($user: SignInInput!) {
+  signIn(input: $user) {
+    accessToken
+    errors
+  }
+}
+
+
+{
+  "user": {
+    "email": "ali@dsfsdf.sd",
+    "password": "asdasd"
+  }
+}
