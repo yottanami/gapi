@@ -14,14 +14,18 @@ module Mutations
           errors: ['User does not exists!']
         }
       else
-
-        access_token = if @user.valid_password?(password)
-                         @user.access_token
-                       end
-        {
-          access_token: access_token,
-          errors: []
-        }
+        if @user.valid_password?(password)
+          access_token = @user.access_token
+          {
+            access_token: access_token,
+            errors: []
+          }
+        else
+          {
+            access_token: nil,
+            errors: ['Username and password is wrong!']
+          }
+        end
       end
 
     end

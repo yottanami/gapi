@@ -88,4 +88,8 @@ class GraphqlController < ApplicationController
     end
   end
 
+  def authentication_error
+    { errors: 'error' }
+  end
+
 end
