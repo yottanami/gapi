@@ -89,7 +89,7 @@ class GraphqlController < ApplicationController
   end
 
   def authentication_error
-    { errors: 'error' }
+        render json: { errors: 'Authentication Error' }, status: 401
   end
 
 end
