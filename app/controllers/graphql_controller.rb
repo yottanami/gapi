@@ -1,5 +1,5 @@
 class GraphqlController < ApplicationController
-  before_action :authenticate_user_from_token!
+#  before_action :authenticate_user_from_token!
 
   def create
     query_string = params[:query]
@@ -20,9 +20,9 @@ class GraphqlController < ApplicationController
 
 
 
-    #unless (query =~ /signIn/) || (query =~ /createUser/) || (query =~ /passwordReset/)
-    #  authenticate_user_from_token!
-    #end
+    unless (query =~ /signIn/) || (query =~ /createUser/) || (query =~ /passwordReset/)
+      authenticate_user_from_token!
+    end
 
 
 
@@ -89,7 +89,7 @@ class GraphqlController < ApplicationController
   end
 
   def authentication_error
-        render json: { errors: 'Authentication Error' }, status: 401
+        render json: { errors: 'Authentication Error' }
   end
 
 end
