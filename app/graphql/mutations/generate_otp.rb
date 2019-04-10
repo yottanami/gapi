@@ -1,6 +1,6 @@
 module Mutations
   class GenerateOtp < GraphQL::Schema::RelayClassicMutation
-    require 'lib/service'
+
 
     field :result, String, null: true
     argument :mobile, String, required: true

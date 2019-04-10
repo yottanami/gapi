@@ -1,5 +1,6 @@
 class GraphqlController < ApplicationController
 #  before_action :authenticate_user_from_token!
+  include Service
 
   def create
     query_string = params[:query]

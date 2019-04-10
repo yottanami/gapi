@@ -1,6 +1,5 @@
 module Mutations
-  class SignIn < GraphQL::Schema::RelayClassicMutation
-    require 'lib/service'
+  class ConfirmOtp < GraphQL::Schema::RelayClassicMutation
 
     field :access_token, String, null: true
     field :errors, [String], null: false
