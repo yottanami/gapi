@@ -28,3 +28,4 @@
 public/uploads/
 *.code-workspace
 lib/service.rb
+.env
