@@ -16,7 +16,7 @@ module Mutations
         }
       else
         user.external_otp = otp
-        result = Service.confirm_otp
+        result = Service.confirm_otp(mobile, otp)
 
         if result
           user.external_token = result

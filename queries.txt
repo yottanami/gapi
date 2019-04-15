@@ -69,3 +69,20 @@ mutation generateOtp($mobile: GenerateOtpInput!) {
   "mobile": "09366452290"
   }
 }
+
+
+
+3mutation confirmOtp($mobile: ConfirmOtpInput!) {
+  confirmOtp(input: $mobile) {
+    accessToken
+    errors
+  }
+}
+
+
+{
+  "mobile": {
+    "mobile": "09366452290",
+    "otp": "2946"
+  }
+}

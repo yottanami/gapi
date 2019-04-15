@@ -6,8 +6,7 @@ class ApplicationController < ActionController::API
 
   def authenticate_user_from_token!
     query = params[:query]
-
-    if (query =~ /confirmOtp/) || (query =~ /requestOtp/)
+    unless (query =~ /confirmOtp/) || (query =~ /generateOtp/)
       auth_token = request.headers['Authorization']
       return authentication_error unless auth_token
       authenticate_with_auth_token auth_token
