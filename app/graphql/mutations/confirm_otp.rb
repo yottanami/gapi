@@ -30,6 +30,7 @@ module Mutations
             access_token: nil,
             errors: ['Wrong otp!']
           }
+          user.save
         end
       end
 

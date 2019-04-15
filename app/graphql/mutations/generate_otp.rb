@@ -14,11 +14,11 @@ module Mutations
       result = Service.generate_otp(mobile)
       if result
         {
-          result: 'Failed'
+          result: 'Success'
         }
       else
         {
-          result: 'Success'
+          result: 'Failure'
         }
       end
     end
