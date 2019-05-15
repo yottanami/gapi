@@ -55,3 +55,6 @@ gem 'mini_magick'
 gem 'file_validators'
 gem 'apollo_upload_server', '2.0.0.beta.1'
 gem 'dotenv'
+
+#######
+gem 'model_discovery'
