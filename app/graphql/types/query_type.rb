@@ -34,7 +34,7 @@ module Types
 
     field :categories, [CategoryType], null: true do
       description "List of all categories or categories of a directory"
-      argument :parent_id, ID, required: false
+#      argument :parent_id, ID, required: false
     end
 
     def categories(parent_id: nil)

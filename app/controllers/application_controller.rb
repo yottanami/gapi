@@ -1,8 +1,10 @@
 class ApplicationController < ActionController::API
-  before_action :authenticate_user_from_token!
+#  before_action :authenticate_user_from_token!
+#   before_action :debug
 
-
-
+  def debug
+    byebug
+  end
 
   def authenticate_user_from_token!
     query = params[:query]

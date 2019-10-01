@@ -15,7 +15,8 @@ module Mutations
     def resolve(title:, body:, image:, video:, category_id:)
       category = Category.find(category_id)
       if !category.nil?
-        post = Post.new(title: title, body: body, category: category, image: image, video: video, user: context[:current_user])
+
+        post = Post.new(title: title, body: body, category: category, image: image, video: video, user_id: 8)
         if post.save
           {
             post: post,
@@ -37,6 +38,8 @@ module Mutations
     end
   end
 end
+
+
 
 
 #mutation example($post: CreatePostInput!){

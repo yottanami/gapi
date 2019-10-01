@@ -58,3 +58,4 @@ gem 'dotenv'
 
 #######
 gem 'model_discovery'
+gem 'rack-cors'
