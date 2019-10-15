@@ -1,2 +1,2 @@
 # gapi
-Generic API
+Generic Graphql API for media sharing applications.
